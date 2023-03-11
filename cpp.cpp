@@ -19,7 +19,7 @@ using namespace std;
 #define min(a, b) (a < b ? a : b)
 #define max(a, b) (a > b ? a : b)
 
-#define gcd(a ,b) __gcd(a, b); 
+#define gcd(a ,b) __gcd(a, b)
 ll lcm(ll a,ll b) { return a/gcd(a,b)*b; }
 
 ll modMul(ll a, ll b) {
@@ -42,15 +42,15 @@ ll modMul(ll a, ll b) {
 }
 
 ll mul(ll A, ll B){
-    a%= MOD;
-    b%= MOD;
-    return (a*b)% MOD;
+    A%= MOD;
+    B%= MOD;
+    return (A*B)% MOD;
 }
 
 ll add(ll A, ll B){
-    a%= MOD;
-    b%= MOD;
-    return (a+b)% MOD;
+    A%= MOD;
+    B%= MOD;
+    return (A+B)% MOD;
 }
 
 bool isPrime(ll a) { 
@@ -68,11 +68,11 @@ template <class T>
 void print_v(vector<T> &v) { for (auto x : v) cout << x << " "; cout << "\b}"; }
 
 // this one is thread safe, use if error
-void fastscan2(int &number)
+void fastscan2(ll &number)
 {
     //variable to indicate sign of input number
     bool negative = false;
-    register int c;
+    int c;
   
     number = 0;
   
@@ -82,18 +82,13 @@ void fastscan2(int &number)
     {
         // number is negative
         negative = true;
-  
-        // extract the next character from the buffer
         c = getchar();
     }
-  
-    // Keep on extracting characters if they are integers
-    // i.e ASCII Value lies from '0'(48) to '9' (57)
+
+    // ASCII Value lies from '0'(48) to '9' (57)
     for (; (c>47 && c<58); c=getchar())
         number = number *10 + c - 48;
   
-    // if scanned input has a negative sign, negate the
-    // value of the input number
     if (negative)
         number *= -1;
 }
@@ -102,7 +97,7 @@ void fastscan(ll &number)
 {
     //variable to indicate sign of input number
     bool negative = false;
-    register ll c;
+    ll c;
   
     number = 0;
     c = getchar_unlocked();
@@ -121,6 +116,8 @@ void fastscan(ll &number)
         number *= -1;
 }
 
+void codeHere();
+
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
@@ -133,7 +130,7 @@ int main(){
     }
 }
 
-codeHere(){
+void codeHere(){
 
 }
 
